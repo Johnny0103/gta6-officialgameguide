@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="820" viewBox="0 0 1200 820" role="img" aria-label="Stylized neon coastal city map at night">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#332019"/>
+      <stop offset="0.42" stop-color="#11100f"/>
+      <stop offset="1" stop-color="#102623"/>
+    </linearGradient>
+    <linearGradient id="sunset" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffb545"/>
+      <stop offset="0.5" stop-color="#ff5c8a"/>
+      <stop offset="1" stop-color="#49d7c9"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="820" fill="url(#sky)"/>
+  <circle cx="908" cy="182" r="140" fill="#ffb545" opacity=".22"/>
+  <circle cx="914" cy="185" r="92" fill="#ff5c8a" opacity=".18"/>
+  <path d="M0 604 C190 548 310 590 470 546 C650 496 776 516 930 472 C1038 442 1120 422 1200 430 L1200 820 L0 820 Z" fill="#1d1711"/>
+  <path d="M88 670 C214 594 332 637 462 589 C632 526 779 563 918 519 C1025 485 1104 474 1198 494" fill="none" stroke="#49d7c9" stroke-width="6" opacity=".72" filter="url(#glow)"/>
+  <path d="M122 806 L296 602 L442 806 Z" fill="#271f17" stroke="#6a5949" stroke-width="3"/>
+  <path d="M390 806 L562 540 L742 806 Z" fill="#211b16" stroke="#6a5949" stroke-width="3"/>
+  <path d="M706 806 L880 506 L1086 806 Z" fill="#251c15" stroke="#6a5949" stroke-width="3"/>
+  <path d="M168 626 L1016 626" stroke="#fff2df" stroke-width="2" opacity=".14"/>
+  <path d="M216 566 L1090 566" stroke="#fff2df" stroke-width="2" opacity=".12"/>
+  <path d="M278 512 L1130 512" stroke="#fff2df" stroke-width="2" opacity=".1"/>
+  <path d="M236 806 L236 484" stroke="#fff2df" stroke-width="2" opacity=".12"/>
+  <path d="M470 806 L470 436" stroke="#fff2df" stroke-width="2" opacity=".12"/>
+  <path d="M710 806 L710 402" stroke="#fff2df" stroke-width="2" opacity=".12"/>
+  <path d="M944 806 L944 410" stroke="#fff2df" stroke-width="2" opacity=".12"/>
+  <path d="M130 744 L270 636 L392 670 L528 566 L694 610 L840 522 L1038 558" fill="none" stroke="#ff5c8a" stroke-width="7" opacity=".82" filter="url(#glow)"/>
+  <path d="M182 698 L380 720 L578 634 L824 676 L1052 594" fill="none" stroke="#ffb545" stroke-width="5" opacity=".72"/>
+  <path d="M334 760 L554 660 L730 708 L1018 650" fill="none" stroke="#83d36f" stroke-width="5" opacity=".6"/>
+  <g fill="url(#sunset)" filter="url(#glow)">
+    <circle cx="270" cy="636" r="14"/>
+    <circle cx="528" cy="566" r="14"/>
+    <circle cx="840" cy="522" r="14"/>
+    <circle cx="1038" cy="558" r="14"/>
+  </g>
+  <g opacity=".7">
+    <rect x="150" y="430" width="34" height="170" rx="4" fill="#2c241c"/>
+    <rect x="195" y="390" width="52" height="214" rx="4" fill="#211b16"/>
+    <rect x="263" y="452" width="44" height="152" rx="4" fill="#2c241c"/>
+    <rect x="930" y="340" width="44" height="224" rx="4" fill="#211b16"/>
+    <rect x="990" y="382" width="34" height="182" rx="4" fill="#2c241c"/>
+    <rect x="1042" y="318" width="58" height="246" rx="4" fill="#211b16"/>
+  </g>
+  <g opacity=".5" stroke="#fff2df" stroke-width="4" stroke-linecap="round">
+    <path d="M114 520 C84 472 74 436 96 392"/>
+    <path d="M114 520 C134 470 162 438 214 410"/>
+    <path d="M114 520 C102 464 114 424 148 378"/>
+    <path d="M1124 520 C1100 470 1094 432 1118 386"/>
+    <path d="M1124 520 C1148 468 1174 438 1198 424"/>
+  </g>
+  <rect x="0" y="0" width="1200" height="820" fill="none" stroke="#fff2df" stroke-opacity=".16" stroke-width="2"/>
+</svg>

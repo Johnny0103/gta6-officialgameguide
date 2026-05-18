@@ -1,0 +1,431 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA 6 100% Completion Guide & Interactive Checklist</title>
+  <meta name="description" content="An unofficial GTA 6 100% completion guide MVP with article-style format, completion categories, progress tracking, and demand analysis.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="utility">
+      <div class="utility-inner">
+        <a class="mybase" href="#"><span>my</span><span>BASE</span></a>
+        <button class="utility-link" type="button" data-auth-open="login">Log in</button>
+        <button class="utility-link" type="button" data-auth-open="create">Create Account</button>
+        <a class="utility-link" href="#">Membership</a>
+        <span class="account-status" id="account-status" hidden></span>
+        <button class="logout" type="button" id="logout-button" hidden>Log out</button>
+        <a class="join" href="#" data-auth-open="create">Join MyGTA</a>
+      </div>
+    </div>
+    <nav class="mainnav" aria-label="Game navigation">
+      <div class="mainnav-inner">
+        <a class="site-logo" href="#" aria-label="GuideBase home"><span>GTA</span><span>B</span></a>
+        <a class="nav-pill" href="#">NEWS</a>
+        <a class="nav-pill active" href="#">VI</a>
+        <a class="nav-pill" href="#">RDR II</a>
+        <a class="nav-pill" href="#">GTA V</a>
+        <a class="nav-pill" href="#">IV</a>
+        <a class="nav-pill" href="#">San Andreas</a>
+        <a class="nav-pill" href="#">More</a>
+        <a class="search-icon" href="#" aria-label="Search">⌕</a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="page">
+    <aside class="side-nav" aria-label="GTA 6 section navigation">
+      <div class="game-logo"><div class="game-logo-box">VI</div></div>
+      <a href="#"><span class="ico">▤</span>Overview</a>
+      <a href="#"><span class="ico">☷</span>Features</a>
+      <a class="current" href="#"><span class="ico">▣</span>100% Completion</a>
+      <a href="#"><span class="ico">▧</span>Map Locations</a>
+      <a href="#"><span class="ico">▱</span>Vehicles</a>
+      <a href="#"><span class="ico">⌁</span>Weapons</a>
+      <a href="#"><span class="ico">♙</span>Characters</a>
+      <a href="#"><span class="ico">✦</span>Activities</a>
+      <a href="#"><span class="ico">⌂</span>Properties</a>
+      <a href="#"><span class="ico">◴</span>Release Date</a>
+    </aside>
+
+    <main class="article">
+      <h1>GTA 6 100% Completion Guide & Interactive Checklist</h1>
+      <div class="breadcrumb"><span>›</span><a href="#">Grand Theft Auto VI Guides</a></div>
+      <hr>
+
+      <figure class="cover">
+        <img src="assets/guide-hero.png" alt="Stylized completion guide cover for GTA 6">
+        <figcaption class="caption">Unofficial MVP format preview. Final checklist data should be updated after GTA 6 launches.</figcaption>
+      </figure>
+
+      <p>On this page, you will find a first MVP version of a GTA 6 100% completion guide and interactive checklist. The goal is to organize likely completion objectives before launch, then replace estimates with verified in-game requirements as soon as the game is available.</p>
+      <p>This format is built for completionists, casual players who do not want to miss major content, and guide readers who prefer a clear article with a tracker instead of a landing page.</p>
+
+      <div class="notice">Current official baseline: Grand Theft Auto VI is scheduled for November 19, 2026 on PlayStation 5 and Xbox Series X|S. Anything not officially confirmed is marked as expected or pending.</div>
+
+      <h2 id="requirements">What Will Likely Be Required For 100% Completion In GTA 6?</h2>
+      <p>Based on past Grand Theft Auto completion structures, GTA 6 will likely combine story progress, side content, activities, collectibles, and open-world challenges. The MVP keeps each category separate so the guide can be updated without rewriting the whole page.</p>
+
+      <h3>1. Main Story Missions</h3>
+      <p>Complete the storyline missions that follow Jason and Lucia through Vice City and the wider state of Leonida. The exact mission list is not public yet, so this section starts as a placeholder for launch-week updates.</p>
+
+      <h3>2. Side Missions & Strangers</h3>
+      <p>Side characters and stranger encounters are likely to provide optional mission chains. These pages should eventually include unlock conditions, map locations, rewards, and spoiler labels.</p>
+
+      <h3>3. Activities & Mini-Games</h3>
+      <p>Pre-launch demand is already high for activities, sports, races, and mini-games. The tracker uses flexible labels so confirmed activities can be added without changing the layout.</p>
+
+      <h3>4. Random Events</h3>
+      <p>Dynamic events across Leonida may count toward completion or related stats. The MVP treats them as a category to monitor until Rockstar or the released game confirms their role.</p>
+
+      <h3>5. Collectibles</h3>
+      <p>Collectibles are usually one of the highest-retention guide categories. The final version should support checklist progress, location notes, map links, and screenshot slots for every collectible.</p>
+
+      <h3>6. Properties, Vehicles, Weapons, And Challenges</h3>
+      <p>Business/property management, vehicle tasks, weapon challenges, races, stunt-style objectives, and achievements may overlap with completion. These should be tracked in separate tables once verified.</p>
+
+      <h2 id="checklist">GTA 6 100% Completion Checklist</h2>
+      <p>The interactive checklist below is an MVP tracker. It saves progress in the browser, supports search and category filtering, and uses status tags to avoid mixing confirmed facts with predictions.</p>
+
+      <section class="tracker" aria-label="Interactive completion checklist">
+        <div class="tracker-head">
+          <h2 class="tracker-title">Interactive Tracker</h2>
+          <div class="tracker-count"><span id="done-count">0</span>/<span id="total-count">0</span></div>
+          <div class="progress-shell" aria-label="Completion progress"><div class="progress-bar" id="progress-bar"></div></div>
+        </div>
+        <div class="tracker-tools">
+          <input id="task-search" type="search" placeholder="Search missions, collectibles, activities...">
+          <select id="category-filter" aria-label="Filter by category">
+            <option value="all">All categories</option>
+            <option value="story">Story</option>
+            <option value="side">Side content</option>
+            <option value="activity">Activities</option>
+            <option value="collectible">Collectibles</option>
+            <option value="challenge">Challenges</option>
+          </select>
+          <button type="button" id="reset-progress">Reset</button>
+        </div>
+
+        <div class="check-section" data-section="story">
+          <h3>Main Story Missions <span class="section-percent" data-section-count="story">0%</span></h3>
+          <label class="task" data-category="story" data-text="complete all story missions jason lucia campaign">
+            <input type="checkbox" data-id="story-main">
+            <span><span class="task-title">Complete all main story missions</span><span class="task-note">Replace with the full mission list once the game is released.</span></span>
+            <span class="tag pending">Pending</span>
+          </label>
+          <label class="task" data-category="story" data-text="finish final mission ending epilogue">
+            <input type="checkbox" data-id="story-ending">
+            <span><span class="task-title">Finish the ending and any epilogue content</span><span class="task-note">Useful placeholder for spoiler-safe launch coverage.</span></span>
+            <span class="tag pending">Pending</span>
+          </label>
+        </div>
+
+        <div class="check-section" data-section="side">
+          <h3>Side Missions & Strangers <span class="section-percent" data-section-count="side">0%</span></h3>
+          <label class="task" data-category="side" data-text="complete stranger missions side character arcs">
+            <input type="checkbox" data-id="side-strangers">
+            <span><span class="task-title">Complete all stranger and side-character missions</span><span class="task-note">Track unlocks by region and chapter when known.</span></span>
+            <span class="tag expected">Expected</span>
+          </label>
+          <label class="task" data-category="side" data-text="complete random encounters dynamic events leonida">
+            <input type="checkbox" data-id="side-events">
+            <span><span class="task-title">Resolve required random events</span><span class="task-note">Likely category, final completion role not confirmed.</span></span>
+            <span class="tag expected">Expected</span>
+          </label>
+        </div>
+
+        <div class="check-section" data-section="activity">
+          <h3>Activities & Mini-Games <span class="section-percent" data-section-count="activity">0%</span></h3>
+          <label class="task" data-category="activity" data-text="races sports activities mini games">
+            <input type="checkbox" data-id="activity-races">
+            <span><span class="task-title">Complete required races and activity events</span><span class="task-note">Create sub-pages for rules, rewards, and best routes.</span></span>
+            <span class="tag expected">Expected</span>
+          </label>
+          <label class="task" data-category="activity" data-text="fishing hunting gym kayaking basketball mini golf">
+            <input type="checkbox" data-id="activity-minigames">
+            <span><span class="task-title">Log completion for mini-games and hobbies</span><span class="task-note">Pre-launch audience demand suggests this will be a high-search topic.</span></span>
+            <span class="tag pending">Pending</span>
+          </label>
+        </div>
+
+        <div class="check-section" data-section="collectible">
+          <h3>Collectibles <span class="section-percent" data-section-count="collectible">0%</span></h3>
+          <label class="task" data-category="collectible" data-text="find all collectibles hidden packages stashes map">
+            <input type="checkbox" data-id="collectibles-all">
+            <span><span class="task-title">Find every required collectible</span><span class="task-note">Final guide should include map coordinates and screenshots.</span></span>
+            <span class="tag expected">Expected</span>
+          </label>
+          <label class="task" data-category="collectible" data-text="collectibles checklist map region vice city leonida">
+            <input type="checkbox" data-id="collectibles-map">
+            <span><span class="task-title">Group collectibles by Leonida region</span><span class="task-note">Useful for players clearing one area at a time.</span></span>
+            <span class="tag pending">Pending</span>
+          </label>
+        </div>
+
+        <div class="check-section" data-section="challenge">
+          <h3>Vehicles, Weapons & Challenges <span class="section-percent" data-section-count="challenge">0%</span></h3>
+          <label class="task" data-category="challenge" data-text="vehicle weapon challenges stunt jumps time trials shooting range">
+            <input type="checkbox" data-id="challenge-vehicle-weapon">
+            <span><span class="task-title">Complete vehicle and weapon challenges</span><span class="task-note">Likely includes race, accuracy, stunt, or time-trial style objectives.</span></span>
+            <span class="tag expected">Expected</span>
+          </label>
+          <label class="task" data-category="challenge" data-text="properties businesses management assets">
+            <input type="checkbox" data-id="challenge-properties">
+            <span><span class="task-title">Complete required property or business tasks</span><span class="task-note">Watchlist item inspired by Vice City and GTA V structures.</span></span>
+            <span class="tag pending">Pending</span>
+          </label>
+        </div>
+      </section>
+
+      <h2 id="demand">User Characteristics And Demand Analysis</h2>
+      <p>The target user is not looking for a cinematic homepage. They want a fast, database-like answer with clear progress utility. For the MVP, prioritize pages that help players track, compare, and return repeatedly.</p>
+      <ul>
+        <li><strong>Completionists:</strong> need category progress, checkboxes, map links, and zero ambiguity about what counts.</li>
+        <li><strong>Casual players:</strong> need a simple list that prevents missed content without spoilers.</li>
+        <li><strong>Search users:</strong> need release/platform facts, estimated completion time, and likely objective categories.</li>
+        <li><strong>Creators:</strong> need clearly separated confirmed, expected, and pending information for quick research.</li>
+      </ul>
+
+      <h2 id="time">How Long Will It Take To Reach 100% Completion In GTA 6?</h2>
+      <p>Exact playtime is unknown before release, but past Rockstar titles suggest the complete route will be much longer than the main campaign. This table is an MVP estimate and should be replaced after player data is available.</p>
+      <table class="time-table">
+        <thead>
+          <tr><th>Play Style</th><th>Estimated Hours</th><th>MVP Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Main Story Only</td><td>30-45 hours</td><td>Depends on mission pacing and travel density.</td></tr>
+          <tr><td>Story + Major Side Content</td><td>65-90 hours</td><td>Most guide readers will land here first.</td></tr>
+          <tr><td>Full 100% Completion</td><td>110-160+ hours</td><td>Collectibles and challenges drive variance.</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="related">Related Pages</h2>
+      <div class="related">
+        <a href="#">GTA 6 Release Date & Countdown</a>
+        <a href="#">GTA 6 Map & Leonida Locations</a>
+        <a href="#">GTA 6 Story Missions Guide</a>
+        <a href="#">GTA 6 Vehicles Database</a>
+      </div>
+    </main>
+
+    <aside class="rightbar" aria-label="Article sidebar">
+      <section class="box">
+        <h3>Details</h3>
+        <div class="box-content">
+          <div class="meta-row"><b>Game</b><span>Grand Theft Auto VI</span></div>
+          <div class="meta-row"><b>Type</b><span>100% Completion Guide</span></div>
+          <div class="meta-row"><b>Status</b><span>MVP / Pre-release</span></div>
+          <div class="meta-row"><b>Platforms</b><span>PS5, Xbox Series X|S</span></div>
+          <div class="meta-row"><b>Launch</b><span>Nov 19, 2026</span></div>
+        </div>
+      </section>
+
+      <section class="box">
+        <h3>On This Page</h3>
+        <div class="box-content toc">
+          <a href="#requirements">Likely requirements</a>
+          <a href="#checklist">Interactive checklist</a>
+          <a href="#demand">User demand</a>
+          <a href="#time">Estimated time</a>
+          <a href="#related">Related pages</a>
+        </div>
+      </section>
+
+      <section class="box">
+        <h3>MVP Demand Priority</h3>
+        <div class="box-content demand-list">
+          <div class="demand-item"><b>Very High</b><span>Release date, platforms, PC status, official checklist.</span></div>
+          <div class="demand-item"><b>High</b><span>Story missions, Jason/Lucia, map regions, activities.</span></div>
+          <div class="demand-item"><b>Retention</b><span>Collectibles, vehicles, weapons, properties, achievements.</span></div>
+        </div>
+      </section>
+
+      <div class="ad">AD SPACE<br>300 x 250</div>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <div class="footer-inner">Unofficial GTA 6 guide MVP. Format inspired by database-style game guide pages; content is original and should be verified after launch.</div>
+  </footer>
+
+  <div class="auth-modal" id="auth-modal" role="dialog" aria-modal="true" aria-labelledby="auth-title" hidden>
+    <div class="auth-dialog">
+      <div class="auth-head">
+        <h2 id="auth-title">Account</h2>
+        <button class="auth-close" type="button" id="auth-close" aria-label="Close account dialog">x</button>
+      </div>
+      <div class="auth-tabs" role="tablist" aria-label="Account forms">
+        <button class="auth-tab" type="button" role="tab" aria-selected="true" aria-controls="login-panel" id="login-tab" data-auth-tab="login">Log in</button>
+        <button class="auth-tab" type="button" role="tab" aria-selected="false" aria-controls="create-panel" id="create-tab" data-auth-tab="create">Create Account</button>
+      </div>
+      <form class="auth-panel" id="login-panel" role="tabpanel" aria-labelledby="login-tab" data-auth-form="login">
+        <label class="auth-field">Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="auth-field">Password
+          <input type="password" name="password" autocomplete="current-password" required minlength="4">
+        </label>
+        <button class="auth-submit" type="submit">Log in</button>
+      </form>
+      <form class="auth-panel" id="create-panel" role="tabpanel" aria-labelledby="create-tab" data-auth-form="create" hidden>
+        <label class="auth-field">Username
+          <input type="text" name="username" autocomplete="username" required minlength="2">
+        </label>
+        <label class="auth-field">Email
+          <input type="email" name="email" autocomplete="email" required>
+        </label>
+        <label class="auth-field">Password
+          <input type="password" name="password" autocomplete="new-password" required minlength="4">
+        </label>
+        <button class="auth-submit" type="submit">Create Account</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const authModal = document.querySelector("#auth-modal");
+    const authTitle = document.querySelector("#auth-title");
+    const authClose = document.querySelector("#auth-close");
+    const authTabs = Array.from(document.querySelectorAll("[data-auth-tab]"));
+    const authForms = Array.from(document.querySelectorAll("[data-auth-form]"));
+    const accountStatus = document.querySelector("#account-status");
+    const logoutButton = document.querySelector("#logout-button");
+    const authOpeners = Array.from(document.querySelectorAll("[data-auth-open]"));
+
+    const checkboxes = Array.from(document.querySelectorAll(".task input[type='checkbox']"));
+    const tasks = Array.from(document.querySelectorAll(".task"));
+    const doneCount = document.querySelector("#done-count");
+    const totalCount = document.querySelector("#total-count");
+    const progressBar = document.querySelector("#progress-bar");
+    const search = document.querySelector("#task-search");
+    const filter = document.querySelector("#category-filter");
+    const reset = document.querySelector("#reset-progress");
+    const sectionCounts = Array.from(document.querySelectorAll("[data-section-count]"));
+
+    function setAccount(name) {
+      if (!name) {
+        accountStatus.hidden = true;
+        logoutButton.hidden = true;
+        accountStatus.textContent = "";
+        localStorage.removeItem("gta6-guide-account");
+        return;
+      }
+
+      accountStatus.textContent = `Signed in as ${name}`;
+      accountStatus.hidden = false;
+      logoutButton.hidden = false;
+      localStorage.setItem("gta6-guide-account", name);
+    }
+
+    function setAuthMode(mode) {
+      authTabs.forEach((tab) => {
+        tab.setAttribute("aria-selected", String(tab.dataset.authTab === mode));
+      });
+
+      authForms.forEach((form) => {
+        form.hidden = form.dataset.authForm !== mode;
+      });
+
+      authTitle.textContent = mode === "create" ? "Create Account" : "Log in";
+    }
+
+    function openAuth(mode) {
+      setAuthMode(mode);
+      authModal.hidden = false;
+      const activeForm = authForms.find((form) => form.dataset.authForm === mode);
+      activeForm.querySelector("input").focus();
+    }
+
+    function closeAuth() {
+      authModal.hidden = true;
+    }
+
+    authOpeners.forEach((opener) => {
+      opener.addEventListener("click", (event) => {
+        event.preventDefault();
+        openAuth(opener.dataset.authOpen);
+      });
+    });
+
+    authTabs.forEach((tab) => {
+      tab.addEventListener("click", () => setAuthMode(tab.dataset.authTab));
+    });
+
+    authClose.addEventListener("click", closeAuth);
+    authModal.addEventListener("click", (event) => {
+      if (event.target === authModal) closeAuth();
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && !authModal.hidden) closeAuth();
+    });
+
+    authForms.forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const formData = new FormData(form);
+        const email = String(formData.get("email") || "");
+        const username = String(formData.get("username") || "").trim();
+        const fallbackName = email.split("@")[0] || "Player";
+        setAccount(username || fallbackName);
+        closeAuth();
+      });
+    });
+
+    logoutButton.addEventListener("click", () => setAccount(""));
+    setAccount(localStorage.getItem("gta6-guide-account") || "");
+
+    function storageKey(id) {
+      return `gta6-completion-${id}`;
+    }
+
+    function updateProgress() {
+      const total = checkboxes.length;
+      const done = checkboxes.filter((box) => box.checked).length;
+      doneCount.textContent = done;
+      totalCount.textContent = total;
+      progressBar.style.width = `${Math.round((done / total) * 100)}%`;
+
+      sectionCounts.forEach((item) => {
+        const section = item.dataset.sectionCount;
+        const group = checkboxes.filter((box) => box.closest(".task").dataset.category === section);
+        const groupDone = group.filter((box) => box.checked).length;
+        item.textContent = `${Math.round((groupDone / group.length) * 100)}%`;
+      });
+    }
+
+    function applyFilters() {
+      const query = search.value.toLowerCase().trim();
+      const category = filter.value;
+
+      tasks.forEach((task) => {
+        const matchesCategory = category === "all" || task.dataset.category === category;
+        const matchesSearch = !query || task.dataset.text.includes(query) || task.textContent.toLowerCase().includes(query);
+        task.classList.toggle("is-hidden", !(matchesCategory && matchesSearch));
+      });
+    }
+
+    checkboxes.forEach((box) => {
+      box.checked = localStorage.getItem(storageKey(box.dataset.id)) === "true";
+      box.addEventListener("change", () => {
+        localStorage.setItem(storageKey(box.dataset.id), String(box.checked));
+        updateProgress();
+      });
+    });
+
+    search.addEventListener("input", applyFilters);
+    filter.addEventListener("change", applyFilters);
+    reset.addEventListener("click", () => {
+      checkboxes.forEach((box) => {
+        box.checked = false;
+        localStorage.removeItem(storageKey(box.dataset.id));
+      });
+      updateProgress();
+    });
+
+    updateProgress();
+  </script>
+</body>
+</html>
