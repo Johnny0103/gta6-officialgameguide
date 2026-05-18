@@ -624,6 +624,30 @@ select {
   font-weight: 800;
 }
 
+.ad-leaderboard {
+  min-height: 90px;
+  margin: 0 0 22px;
+}
+
+.ad-inline {
+  width: min(336px, 100%);
+  min-height: 280px;
+  margin: 18px auto 22px;
+}
+
+.footer-ad-wrap {
+  width: min(1260px, 100%);
+  margin: 0 auto;
+  padding: 18px 22px 0;
+}
+
+.ad-footer {
+  min-height: 90px;
+  background: #1a1a1a;
+  color: #777;
+  border-color: #333;
+}
+
 .demand-list {
   display: grid;
   gap: 10px;
