@@ -16,26 +16,26 @@
   <header>
     <div class="utility">
       <div class="utility-inner">
-        <a class="mybase" href="#"><span>my</span><span>BASE</span></a>
+        <a class="mybase" href="#overview"><span>my</span><span>BASE</span></a>
         <button class="utility-link" type="button" data-auth-open="login">Log in</button>
         <button class="utility-link" type="button" data-auth-open="create">Create Account</button>
-        <a class="utility-link" href="#">Membership</a>
+        <button class="utility-link" type="button" data-info-title="Membership" data-info-body="Membership is planned for the full guide site. In this MVP it will unlock saved checklists, spoiler filters, and ad-light browsing once a backend is added.">Membership</button>
         <span class="account-status" id="account-status" hidden></span>
         <button class="logout" type="button" id="logout-button" hidden>Log out</button>
-        <a class="join" href="#" data-auth-open="create">Join MyGTA</a>
+        <button class="join" type="button" data-auth-open="create">Join MyGTA</button>
       </div>
     </div>
     <nav class="mainnav" aria-label="Game navigation">
       <div class="mainnav-inner">
-        <a class="site-logo" href="#" aria-label="GuideBase home"><span>GTA</span><span>B</span></a>
-        <a class="nav-pill" href="#">NEWS</a>
-        <a class="nav-pill active" href="#">VI</a>
-        <a class="nav-pill" href="#">RDR II</a>
-        <a class="nav-pill" href="#">GTA V</a>
-        <a class="nav-pill" href="#">IV</a>
-        <a class="nav-pill" href="#">San Andreas</a>
-        <a class="nav-pill" href="#">More</a>
-        <a class="search-icon" href="#" aria-label="Search">⌕</a>
+        <a class="site-logo" href="#overview" aria-label="GuideBase home"><span>GTA</span><span>B</span></a>
+        <a class="nav-pill" href="#latest-news">NEWS</a>
+        <a class="nav-pill active" href="#overview">VI</a>
+        <button class="nav-pill" type="button" data-info-title="RDR II" data-info-body="This MVP is focused on GTA 6. A Red Dead Redemption II guide section can be added later as a separate content hub.">RDR II</button>
+        <button class="nav-pill" type="button" data-info-title="GTA V" data-info-body="This page is currently a GTA 6 guide. GTA V content can be linked once a separate GTA V guide page exists.">GTA V</button>
+        <button class="nav-pill" type="button" data-info-title="GTA IV" data-info-body="GTA IV content is not part of this MVP yet.">IV</button>
+        <button class="nav-pill" type="button" data-info-title="San Andreas" data-info-body="San Andreas content is not part of this MVP yet.">San Andreas</button>
+        <button class="nav-pill" type="button" data-info-title="More Games" data-info-body="More game hubs can be added when the site grows beyond the GTA 6 completion guide.">More</button>
+        <a class="search-icon" href="#checklist" data-focus-search aria-label="Search">⌕</a>
       </div>
     </nav>
   </header>
@@ -43,21 +43,22 @@
   <div class="page">
     <aside class="side-nav" aria-label="GTA 6 section navigation">
       <div class="game-logo"><div class="game-logo-box">VI</div></div>
-      <a href="#"><span class="ico">▤</span>Overview</a>
-      <a href="#"><span class="ico">☷</span>Features</a>
-      <a class="current" href="#"><span class="ico">▣</span>100% Completion</a>
-      <a href="#"><span class="ico">▧</span>Map Locations</a>
-      <a href="#"><span class="ico">▱</span>Vehicles</a>
-      <a href="#"><span class="ico">⌁</span>Weapons</a>
-      <a href="#"><span class="ico">♙</span>Characters</a>
-      <a href="#"><span class="ico">✦</span>Activities</a>
-      <a href="#"><span class="ico">⌂</span>Properties</a>
-      <a href="#"><span class="ico">◴</span>Release Date</a>
+      <a href="#overview"><span class="ico">▤</span>Overview</a>
+      <a href="#features"><span class="ico">☷</span>Features</a>
+      <a class="current" href="#checklist"><span class="ico">▣</span>100% Completion</a>
+      <a href="#map-locations"><span class="ico">▧</span>Map Locations</a>
+      <a href="#vehicles"><span class="ico">▱</span>Vehicles</a>
+      <a href="#weapons"><span class="ico">⌁</span>Weapons</a>
+      <a href="#characters"><span class="ico">♙</span>Characters</a>
+      <a href="#activities"><span class="ico">✦</span>Activities</a>
+      <a href="#properties"><span class="ico">⌂</span>Properties</a>
+      <a href="#release-date"><span class="ico">◴</span>Release Date</a>
     </aside>
 
     <main class="article">
+      <span id="overview" class="anchor-target"></span>
       <h1>GTA 6 100% Completion Guide & Interactive Checklist</h1>
-      <div class="breadcrumb"><span>›</span><a href="#">Grand Theft Auto VI Guides</a></div>
+      <div class="breadcrumb"><span>›</span><a href="#overview">Grand Theft Auto VI Guides</a></div>
       <hr>
 
       <figure class="cover">
@@ -197,6 +198,33 @@
         <li><strong>Creators:</strong> need clearly separated confirmed, expected, and pending information for quick research.</li>
       </ul>
 
+      <h2 id="latest-news">Latest GTA 6 Guide Updates</h2>
+      <p>This MVP news area keeps the site navigation useful before launch. Use it for official Rockstar updates, checklist revisions, trailer analysis, and confirmed changes to release/platform details.</p>
+
+      <h2 id="features">GTA 6 Features Watchlist</h2>
+      <p>Feature pages should separate confirmed details from expected guide topics. High-demand feature coverage includes story structure, wanted-level systems, economy, travel, activities, properties, vehicles, weapons, and online support when officially announced.</p>
+
+      <h2 id="map-locations">GTA 6 Map Locations</h2>
+      <p>Map content will focus on Vice City and the state of Leonida. The final guide should add region pages, marker filters, collectible routes, activity locations, safehouses, shops, and screenshot-backed map references.</p>
+
+      <h2 id="vehicles">GTA 6 Vehicles</h2>
+      <p>The vehicle database will eventually track car classes, bikes, boats, aircraft, emergency vehicles, special unlocks, customization options, and challenge requirements.</p>
+
+      <h2 id="weapons">GTA 6 Weapons</h2>
+      <p>The weapon section will list confirmed weapons, unlock conditions, shop availability, upgrade paths, stats, and any completion-related shooting or accuracy challenges.</p>
+
+      <h2 id="characters">GTA 6 Characters</h2>
+      <p>Character pages will start with Jason Duval and Lucia Caminos, then expand to supporting cast profiles, mission appearances, spoiler-safe summaries, and relationship notes after launch.</p>
+
+      <h2 id="activities">GTA 6 Activities</h2>
+      <p>Activities are a major repeat-visit category for guide users. This section should collect races, sports, hobbies, mini-games, random encounters, and region-specific side content once verified.</p>
+
+      <h2 id="properties">GTA 6 Properties</h2>
+      <p>Property and business information is still pending. The guide structure leaves room for property costs, income, upgrades, unlock requirements, and completion relevance.</p>
+
+      <h2 id="release-date">GTA 6 Release Date</h2>
+      <p>Grand Theft Auto VI is currently scheduled for November 19, 2026 on PlayStation 5 and Xbox Series X|S. PC release timing, editions, price, install size, and performance modes should remain watchlist items until official details are available.</p>
+
       <h2 id="time">How Long Will It Take To Reach 100% Completion In GTA 6?</h2>
       <p>Exact playtime is unknown before release, but past Rockstar titles suggest the complete route will be much longer than the main campaign. This table is an MVP estimate and should be replaced after player data is available.</p>
       <table class="time-table">
@@ -212,10 +240,10 @@
 
       <h2 id="related">Related Pages</h2>
       <div class="related">
-        <a href="#">GTA 6 Release Date & Countdown</a>
-        <a href="#">GTA 6 Map & Leonida Locations</a>
-        <a href="#">GTA 6 Story Missions Guide</a>
-        <a href="#">GTA 6 Vehicles Database</a>
+        <a href="#release-date">GTA 6 Release Date & Countdown</a>
+        <a href="#map-locations">GTA 6 Map & Leonida Locations</a>
+        <a href="#checklist">GTA 6 Story Missions Guide</a>
+        <a href="#vehicles">GTA 6 Vehicles Database</a>
       </div>
     </main>
 
@@ -296,6 +324,18 @@
     </div>
   </div>
 
+  <div class="auth-modal" id="info-modal" role="dialog" aria-modal="true" aria-labelledby="info-title" hidden>
+    <div class="auth-dialog">
+      <div class="auth-head">
+        <h2 id="info-title">Section</h2>
+        <button class="auth-close" type="button" id="info-close" aria-label="Close message dialog">x</button>
+      </div>
+      <div class="auth-panel">
+        <p class="info-body" id="info-body"></p>
+      </div>
+    </div>
+  </div>
+
   <script>
     const authModal = document.querySelector("#auth-modal");
     const authTitle = document.querySelector("#auth-title");
@@ -305,6 +345,13 @@
     const accountStatus = document.querySelector("#account-status");
     const logoutButton = document.querySelector("#logout-button");
     const authOpeners = Array.from(document.querySelectorAll("[data-auth-open]"));
+    const infoModal = document.querySelector("#info-modal");
+    const infoTitle = document.querySelector("#info-title");
+    const infoBody = document.querySelector("#info-body");
+    const infoClose = document.querySelector("#info-close");
+    const infoOpeners = Array.from(document.querySelectorAll("[data-info-title]"));
+    const sideLinks = Array.from(document.querySelectorAll(".side-nav a"));
+    const searchFocusLinks = Array.from(document.querySelectorAll("[data-focus-search]"));
 
     const checkboxes = Array.from(document.querySelectorAll(".task input[type='checkbox']"));
     const tasks = Array.from(document.querySelectorAll(".task"));
@@ -354,6 +401,17 @@
       authModal.hidden = true;
     }
 
+    function openInfo(title, body) {
+      infoTitle.textContent = title;
+      infoBody.textContent = body;
+      infoModal.hidden = false;
+      infoClose.focus();
+    }
+
+    function closeInfo() {
+      infoModal.hidden = true;
+    }
+
     authOpeners.forEach((opener) => {
       opener.addEventListener("click", (event) => {
         event.preventDefault();
@@ -370,8 +428,20 @@
       if (event.target === authModal) closeAuth();
     });
 
+    infoOpeners.forEach((opener) => {
+      opener.addEventListener("click", () => {
+        openInfo(opener.dataset.infoTitle, opener.dataset.infoBody);
+      });
+    });
+
+    infoClose.addEventListener("click", closeInfo);
+    infoModal.addEventListener("click", (event) => {
+      if (event.target === infoModal) closeInfo();
+    });
+
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && !authModal.hidden) closeAuth();
+      if (event.key === "Escape" && !infoModal.hidden) closeInfo();
     });
 
     authForms.forEach((form) => {
@@ -388,6 +458,30 @@
 
     logoutButton.addEventListener("click", () => setAccount(""));
     setAccount(localStorage.getItem("gta6-guide-account") || "");
+
+    function updateSideNavFromHash() {
+      const hash = window.location.hash || "#overview";
+      const match = sideLinks.find((link) => link.getAttribute("href") === hash);
+      if (!match) return;
+      sideLinks.forEach((item) => item.classList.remove("current"));
+      match.classList.add("current");
+    }
+
+    sideLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        sideLinks.forEach((item) => item.classList.remove("current"));
+        link.classList.add("current");
+      });
+    });
+
+    window.addEventListener("hashchange", updateSideNavFromHash);
+    updateSideNavFromHash();
+
+    searchFocusLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        window.setTimeout(() => search.focus(), 120);
+      });
+    });
 
     function storageKey(id) {
       return `gta6-completion-${id}`;
