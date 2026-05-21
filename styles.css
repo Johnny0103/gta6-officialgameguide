@@ -276,6 +276,32 @@ select {
   border-right: 1px solid var(--line);
 }
 
+.simple-page {
+  width: min(960px, calc(100% - 28px));
+  margin: 28px auto;
+  border: 1px solid var(--line);
+  background: #fff;
+}
+
+.simple-page .article {
+  border-right: 0;
+}
+
+.simple-nav {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin: 18px 0 24px;
+}
+
+.simple-nav a {
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  background: #fafafa;
+  color: var(--red);
+  font-weight: 800;
+}
+
 .article h1 {
   margin: 0 0 12px;
   color: #2b2b2b;
@@ -361,6 +387,28 @@ select {
   background: #fff7eb;
   color: #4d3a1f;
   font-weight: 700;
+}
+
+.policy-list {
+  margin: 0 0 18px 22px;
+  padding: 0;
+}
+
+.policy-list li {
+  margin: 7px 0;
+}
+
+.setup-step {
+  padding: 14px 16px;
+  margin: 14px 0;
+  border: 1px solid var(--line);
+  background: #fafafa;
+}
+
+.setup-step strong {
+  display: block;
+  margin-bottom: 4px;
+  color: #222;
 }
 
 .tracker {
@@ -700,6 +748,21 @@ select {
   margin: 0 auto;
   padding: 28px 22px;
   font-size: 14px;
+}
+
+.footer-inner p {
+  margin: 12px 0 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.footer-links a {
+  color: #fff;
+  font-weight: 800;
 }
 
 .auth-modal {
