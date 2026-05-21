@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GTA 6 Community Chat & Q&A</title>
+  <meta name="description" content="Static GTA 6 community hub with chat preview, player Q&A, community rules, and coming-soon posting forms.">
+  <link rel="canonical" href="https://johnny0103.github.io/gta6-officialgameguide/community.html">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="mainnav">
+    <div class="mainnav-inner">
+      <a class="site-logo" href="index.html" aria-label="Guide home"><span>GTA</span><span>B</span></a>
+      <a class="nav-pill" href="ps4.html">PS4</a>
+      <a class="nav-pill" href="ps5.html">PS5</a>
+      <a class="nav-pill" href="xbox.html">XBOX</a>
+      <a class="nav-pill active" href="community.html">COMMUNITY</a>
+    </div>
+  </header>
+  <div class="page">
+    <aside class="side-nav" aria-label="GTA 6 section navigation">
+      <div class="game-logo"><div class="game-logo-box">VI</div></div>
+      <a href="index.html#overview"><span class="ico">▤</span>Overview</a>
+      <a href="index.html#features"><span class="ico">☷</span>Features</a>
+      <a href="index.html#checklist"><span class="ico">▣</span>100% Completion</a>
+      <a href="map-locations.html"><span class="ico">▧</span>Map Locations</a>
+      <a href="vehicles.html"><span class="ico">▱</span>Vehicles</a>
+      <a href="weapons.html"><span class="ico">⌁</span>Weapons</a>
+      <a href="characters.html"><span class="ico">♙</span>Characters</a>
+      <a href="activities.html"><span class="ico">✦</span>Activities</a>
+      <a href="properties.html"><span class="ico">⌂</span>Properties</a>
+      <a href="release-date.html"><span class="ico">◴</span>Release Date</a>
+    </aside>
+    <main class="article">
+      <h1>GTA 6 Community Chat & Q&A</h1>
+      <div class="breadcrumb"><span>›</span><a href="index.html">Guide Home</a></div>
+      <div class="notice">Community posting is a static MVP right now. Messages and questions are previews only until a real backend, moderation, and account system are added.</div>
+      <h2>Community Chat Preview</h2>
+      <div class="chat-panel" aria-label="Sample community chat">
+        <div class="chat-message"><b>ViceCityRunner</b>Anyone else planning to clear Vice City first before touching the Keys?</div>
+        <div class="chat-message"><b>LeonidaMapper</b>I am waiting for confirmed collectible routes. The evidence labels are useful before launch.</div>
+        <div class="chat-message"><b>JasonMain</b>PS5 or Xbox first? I mostly care about stable performance and controller comfort.</div>
+      </div>
+      <form class="community-form" data-community-form>
+        <label>Display Name
+          <input type="text" name="name" placeholder="Your player name" required>
+        </label>
+        <label>Message
+          <textarea name="message" placeholder="Share a setup tip, route idea, or guide question." required></textarea>
+        </label>
+        <button type="submit">Post Message</button>
+        <p class="form-confirmation" hidden>Community posting is coming soon. Your message was not published publicly.</p>
+      </form>
+      <h2>Player Q&A</h2>
+      <div class="setup-grid">
+        <article class="qa-card"><h3>Can I play GTA VI on PS4?</h3><p>No official PS4 version has been announced. Use the PS4 page for honest status and upgrade guidance.</p></article>
+        <article class="qa-card"><h3>Which platforms are official?</h3><p>Rockstar currently lists PlayStation 5 and Xbox Series X|S for November 19, 2026.</p></article>
+        <article class="qa-card"><h3>Are controls final?</h3><p>No. The platform pages describe expected controller areas and mark final controls as launch verification items.</p></article>
+        <article class="qa-card"><h3>Can I submit guide corrections?</h3><p>Use the contact page for now. Public Q&A posting will need moderation before launch.</p></article>
+      </div>
+      <form class="community-form" data-community-form>
+        <label>Question
+          <textarea name="question" placeholder="Ask a setup or guide question." required></textarea>
+        </label>
+        <button type="submit">Ask Question</button>
+        <p class="form-confirmation" hidden>Q&A posting is coming soon. Your question was not published publicly.</p>
+      </form>
+      <h2>Community Rules</h2>
+      <ul class="policy-list">
+        <li>No spoilers without a clear warning.</li>
+        <li>No fake download links, key sellers, or platform claims.</li>
+        <li>No harassment, hate speech, or personal attacks.</li>
+        <li>No leaks or rumors presented as confirmed facts.</li>
+      </ul>
+    </main>
+    <aside class="rightbar" aria-label="Community sidebar">
+      <section class="box">
+        <h3>Community Status</h3>
+        <div class="box-content">
+          <div class="meta-row"><b>Posting</b><span>Coming soon</span></div>
+          <div class="meta-row"><b>Moderation</b><span>Required</span></div>
+          <div class="meta-row"><b>Leaks</b><span>Not treated as facts</span></div>
+        </div>
+      </section>
+      <div class="ad">AD SPACE<br>300 x 250</div>
+    </aside>
+  </div>
+  <script>
+    document.querySelectorAll("[data-community-form]").forEach((form) => {
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        const confirmation = form.querySelector(".form-confirmation");
+        confirmation.hidden = false;
+        form.reset();
+      });
+    });
+  </script>
+</body>
+</html>
