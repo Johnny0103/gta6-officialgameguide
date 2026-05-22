@@ -453,6 +453,15 @@
     </div>
   </div>
 
+  <div class="signup-popup" id="signup-popup" role="status" aria-live="polite" hidden>
+    <div class="signup-sparkle" aria-hidden="true">✨</div>
+    <div>
+      <strong>thank you for joining GTAB!</strong>
+      <span>Welcome in, player. Your guide tracker is ready. 🎮</span>
+    </div>
+    <button type="button" id="signup-popup-close" aria-label="Close signup message">x</button>
+  </div>
+
   <script>
     const authModal = document.querySelector("#auth-modal");
     const authTitle = document.querySelector("#auth-title");
@@ -467,6 +476,8 @@
     const infoBody = document.querySelector("#info-body");
     const infoClose = document.querySelector("#info-close");
     const infoOpeners = Array.from(document.querySelectorAll("[data-info-title]"));
+    const signupPopup = document.querySelector("#signup-popup");
+    const signupPopupClose = document.querySelector("#signup-popup-close");
     const sideLinks = Array.from(document.querySelectorAll(".side-nav a"));
     const searchFocusLinks = Array.from(document.querySelectorAll("[data-focus-search]"));
 
@@ -531,6 +542,26 @@
       infoModal.hidden = true;
     }
 
+    function showSignupPopup() {
+      signupPopup.hidden = false;
+      signupPopup.classList.remove("is-visible");
+      window.setTimeout(() => signupPopup.classList.add("is-visible"), 20);
+      window.clearTimeout(showSignupPopup.timer);
+      showSignupPopup.timer = window.setTimeout(() => {
+        signupPopup.classList.remove("is-visible");
+        window.setTimeout(() => {
+          signupPopup.hidden = true;
+        }, 260);
+      }, 5200);
+    }
+
+    function closeSignupPopup() {
+      signupPopup.classList.remove("is-visible");
+      window.setTimeout(() => {
+        signupPopup.hidden = true;
+      }, 260);
+    }
+
     authOpeners.forEach((opener) => {
       opener.addEventListener("click", (event) => {
         event.preventDefault();
@@ -557,10 +588,12 @@
     infoModal.addEventListener("click", (event) => {
       if (event.target === infoModal) closeInfo();
     });
+    signupPopupClose.addEventListener("click", closeSignupPopup);
 
     document.addEventListener("keydown", (event) => {
       if (event.key === "Escape" && !authModal.hidden) closeAuth();
       if (event.key === "Escape" && !infoModal.hidden) closeInfo();
+      if (event.key === "Escape" && !signupPopup.hidden) closeSignupPopup();
     });
 
     authForms.forEach((form) => {
@@ -571,9 +604,11 @@
         const username = String(formData.get("username") || "").trim();
         const fallbackName = email.split("@")[0] || "Player";
         const name = username || fallbackName;
-        const message = form.dataset.authForm === "create" ? "thank you for joining GTAB!" : "you're logged in!";
+        const isCreate = form.dataset.authForm === "create";
+        const message = isCreate ? `Signed in as ${name}` : "you're logged in!";
         setAccount(name, message);
         closeAuth();
+        if (isCreate) showSignupPopup();
       });
     });
 
