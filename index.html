@@ -22,7 +22,6 @@
         <a class="mybase" href="index.html"><span>my</span><span>BASE</span></a>
         <button class="utility-link" type="button" data-auth-open="login">Log in</button>
         <button class="utility-link" type="button" data-auth-open="create">Create Account</button>
-        <button class="utility-link" type="button" data-info-title="Membership" data-info-body="Membership is planned for the full guide site. In this MVP it will unlock saved checklists, spoiler filters, and ad-light browsing once a backend is added.">Membership</button>
         <span class="account-status" id="account-status" hidden></span>
         <button class="logout" type="button" id="logout-button" hidden>Log out</button>
         <button class="join" type="button" data-auth-open="create">Join MyGTA</button>
@@ -31,6 +30,7 @@
     <nav class="mainnav" aria-label="Game navigation">
       <div class="mainnav-inner">
         <a class="site-logo" href="index.html" aria-label="Guide home"><span>GTA</span><span>B</span></a>
+      <a class="nav-pill" href="index.html#latest-news">NEWS</a>
       <a class="nav-pill" href="ps4.html">PS4</a>
       <a class="nav-pill" href="ps5.html">PS5</a>
       <a class="nav-pill" href="xbox.html">XBOX</a>
@@ -473,19 +473,21 @@
     const reset = document.querySelector("#reset-progress");
     const sectionCounts = Array.from(document.querySelectorAll("[data-section-count]"));
 
-    function setAccount(name) {
+    function setAccount(name, message = "") {
       if (!name) {
         accountStatus.hidden = true;
         logoutButton.hidden = true;
         accountStatus.textContent = "";
         localStorage.removeItem("gta6-guide-account");
+        localStorage.removeItem("gta6-guide-account-message");
         return;
       }
 
-      accountStatus.textContent = `Signed in as ${name}`;
+      accountStatus.textContent = message || `Signed in as ${name}`;
       accountStatus.hidden = false;
       logoutButton.hidden = false;
       localStorage.setItem("gta6-guide-account", name);
+      localStorage.setItem("gta6-guide-account-message", accountStatus.textContent);
     }
 
     function setAuthMode(mode) {
@@ -561,13 +563,15 @@
         const email = String(formData.get("email") || "");
         const username = String(formData.get("username") || "").trim();
         const fallbackName = email.split("@")[0] || "Player";
-        setAccount(username || fallbackName);
+        const name = username || fallbackName;
+        const message = form.dataset.authForm === "create" ? "thank you for joining GTAB!" : "you're logged in!";
+        setAccount(name, message);
         closeAuth();
       });
     });
 
     logoutButton.addEventListener("click", () => setAccount(""));
-    setAccount(localStorage.getItem("gta6-guide-account") || "");
+    setAccount(localStorage.getItem("gta6-guide-account") || "", localStorage.getItem("gta6-guide-account-message") || "");
 
     function updateSideNavFromHash() {
       const hash = window.location.hash || "#overview";
