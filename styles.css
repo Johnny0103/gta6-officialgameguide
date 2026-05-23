@@ -36,6 +36,15 @@ a {
   text-decoration: none;
 }
 
+.text-link {
+  color: var(--red);
+  font-weight: 900;
+}
+
+.text-link:hover {
+  text-decoration: underline;
+}
+
 button,
 input,
 select {
