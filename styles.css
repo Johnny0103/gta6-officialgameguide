@@ -26,6 +26,7 @@ html {
 body {
   margin: 0;
   min-width: 0;
+  overflow-x: hidden;
   background: #efefef;
   color: var(--ink);
   line-height: 1.55;
@@ -146,6 +147,7 @@ select {
   position: sticky;
   top: 0;
   z-index: 20;
+  overflow-x: hidden;
   background: var(--black);
   color: var(--white);
   box-shadow: 0 2px 8px rgba(0, 0, 0, .18);
@@ -541,6 +543,8 @@ select {
 }
 
 .guide-table {
+  display: block;
+  overflow-x: auto;
   width: 100%;
   margin: 14px 0 22px;
   border-collapse: collapse;
@@ -635,6 +639,89 @@ select {
   font-weight: 900;
 }
 
+.popular-searches,
+.quick-answer-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 16px 0 24px;
+}
+
+.search-card,
+.quick-answer {
+  border: 1px solid var(--line);
+  background: #fff;
+  padding: 14px;
+}
+
+.search-card {
+  display: block;
+  color: inherit;
+}
+
+.search-card b,
+.quick-answer b {
+  display: block;
+  margin-bottom: 6px;
+  color: #222;
+  font-size: 17px;
+}
+
+.search-card span,
+.quick-answer span,
+.page-updated {
+  display: block;
+  color: #666;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.source-box {
+  margin: 18px 0 22px;
+  padding: 14px;
+  border-left: 4px solid var(--red);
+  background: #fafafa;
+}
+
+.source-box h2,
+.source-box h3 {
+  margin-top: 0;
+}
+
+.source-box a {
+  color: var(--red);
+  font-weight: 900;
+}
+
+.guide-index-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 18px 0 24px;
+}
+
+.guide-index-card {
+  display: grid;
+  align-content: start;
+  min-height: 148px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  background: #fff;
+  color: inherit;
+}
+
+.guide-index-card b {
+  margin-bottom: 7px;
+  color: #222;
+  font-size: 18px;
+}
+
+.guide-index-card span {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.45;
+}
+
 .setup-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -698,6 +785,8 @@ select {
 }
 
 .controller-table {
+  display: block;
+  overflow-x: auto;
   width: 100%;
   margin: 14px 0 22px;
   border-collapse: collapse;
@@ -1010,6 +1099,8 @@ select {
 }
 
 .time-table {
+  display: block;
+  overflow-x: auto;
   width: 100%;
   margin: 14px 0 22px;
   border-collapse: collapse;
@@ -1498,6 +1589,9 @@ select {
   .database-grid,
   .news-grid,
   .status-grid,
+  .popular-searches,
+  .quick-answer-grid,
+  .guide-index-grid,
   .setup-grid {
     grid-template-columns: 1fr;
   }
@@ -1508,6 +1602,14 @@ select {
 
   .step-item {
     grid-template-columns: 1fr;
+  }
+
+  .guide-table,
+  .controller-table,
+  .time-table {
+    display: block;
+    overflow-x: auto;
+    max-width: 100%;
   }
 }
 
