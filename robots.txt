@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://johnny0103.github.io/gta6-officialgameguide/sitemap.xml
+Sitemap: https://gtaviguidehub.com/sitemap.xml
