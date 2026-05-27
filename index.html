@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GTA 6 100% Completion Guide, Checklist, Map & Platform Setup</title>
-  <meta name="description" content="Track GTA 6 100% completion with an interactive checklist, Leonida map guide, PS5 and Xbox setup help, news timeline, and verified evidence labels.">
+  <meta name="description" content="Track GTA 6 100% completion with an interactive checklist, MyGTA Dashboard, launch readiness score, Leonida map guide, PS5/Xbox setup, and news.">
   <link rel="canonical" href="https://gtaviguidehub.com/">
   <meta property="og:title" content="GTA 6 100% Completion Guide, Checklist, Map & Platform Setup">
   <meta property="og:description" content="Unofficial GTA 6 checklist, map, platform setup, news, and evidence-based guide hub for launch preparation.">
@@ -32,7 +32,7 @@
         <button class="utility-link" type="button" data-auth-open="create">Create Account</button>
         <span class="account-status" id="account-status" hidden></span>
         <button class="logout" type="button" id="logout-button" hidden>Log out</button>
-        <button class="join" type="button" data-auth-open="create">Join MyGTA</button>
+        <button class="join" type="button" data-auth-open="create">Create MyGTA Dashboard</button>
       </div>
     </div>
     <nav class="mainnav" aria-label="Game navigation">
@@ -43,6 +43,7 @@
       <a class="nav-pill" href="ps5.html">PS5</a>
       <a class="nav-pill" href="xbox.html">XBOX</a>
       <a class="nav-pill" href="community.html">COMMUNITY</a>
+      <a class="nav-pill" href="my-gta-dashboard.html">MYGTA</a>
       <a class="nav-pill" href="about.html">ABOUT US</a>
       <a class="nav-pill" href="contact.html">CONTACT US</a>
       </div>
@@ -119,6 +120,14 @@
       <p>This format is built for completionists, casual players who do not want to miss major content, and guide readers who prefer a clear article with a tracker instead of a landing page.</p>
 
       <div class="notice">Current official baseline: Grand Theft Auto VI is scheduled for November 19, 2026 on PlayStation 5 and Xbox Series X|S. This is an unofficial fan site, not affiliated with Rockstar Games or Take-Two Interactive. Anything not officially confirmed is marked as expected or pending.</div>
+
+      <section class="dashboard-link-card" aria-label="MyGTA Dashboard">
+        <div>
+          <b>Build Your GTA 6 Launch Plan</b>
+          <span>Create a free MyGTA Dashboard to save your GTA 6 checklist progress, launch readiness score, platform setup, and favorite guides in this browser.</span>
+        </div>
+        <a href="my-gta-dashboard.html">Open My Dashboard</a>
+      </section>
 
       <h2 id="start-here">Start Here</h2>
       <p>New visitors usually need one of five answers first: when GTA 6 releases, whether their platform is supported, where Leonida regions fit, who Jason and Lucia are, and what will count toward 100% completion.</p>
@@ -489,6 +498,16 @@
         <button class="auth-submit" type="submit">Log in</button>
       </form>
       <form class="auth-panel" id="create-panel" role="tabpanel" aria-labelledby="create-tab" data-auth-form="create" hidden>
+        <div class="auth-benefits">
+          <b>Why create a free local profile?</b>
+          <ul>
+            <li>Save checklist progress</li>
+            <li>Save launch readiness score</li>
+            <li>Bookmark PS5, Xbox, map, and character guides</li>
+            <li>Get a personal launch prep route</li>
+          </ul>
+          <p>Saved in this browser only. No cloud account or cross-device sync.</p>
+        </div>
         <label class="auth-field">Username
           <input type="text" name="username" autocomplete="username" required minlength="2">
         </label>
@@ -520,6 +539,7 @@
     <div>
       <strong>thank you for joining GTAB!</strong>
       <span>Welcome in, player. Your guide tracker is ready. 🎮</span>
+      <a href="my-gta-dashboard.html">Open My Dashboard</a>
     </div>
     <button type="button" id="signup-popup-close" aria-label="Close signup message">x</button>
   </div>
@@ -708,9 +728,13 @@
     function updateProgress() {
       const total = checkboxes.length;
       const done = checkboxes.filter((box) => box.checked).length;
+      const percent = total ? Math.round((done / total) * 100) : 0;
       doneCount.textContent = done;
       totalCount.textContent = total;
-      progressBar.style.width = `${Math.round((done / total) * 100)}%`;
+      progressBar.style.width = `${percent}%`;
+      localStorage.setItem("gta6-checklist-done", String(done));
+      localStorage.setItem("gta6-checklist-total", String(total));
+      localStorage.setItem("gta6-checklist-percent", String(percent));
 
       sectionCounts.forEach((item) => {
         const section = item.dataset.sectionCount;

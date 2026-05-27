@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GTA 6 Launch Readiness Checklist: PS5, Xbox, Storage & Setup</title>
-  <meta name="description" content="Check your GTA 6 launch readiness score for PS5 or Xbox with storage, account, controller, spoiler-safety, and guide-route preparation.">
+  <meta name="description" content="Check and save your GTA 6 launch readiness score for PS5 or Xbox with storage, account, controller, spoiler-safety, guide-route prep, and MyGTA Dashboard.">
   <link rel="canonical" href="https://gtaviguidehub.com/launch-readiness.html">
   <meta property="og:title" content="GTA 6 Launch Readiness Checklist: PS5, Xbox, Storage & Setup">
   <meta property="og:description" content="Score your GTA 6 launch preparation across platform, storage, account, controller, spoiler safety, and guide route readiness.">
@@ -57,6 +57,7 @@
       <a class="nav-pill" href="ps5.html">PS5</a>
       <a class="nav-pill" href="xbox.html">XBOX</a>
       <a class="nav-pill" href="community.html">COMMUNITY</a>
+      <a class="nav-pill" href="my-gta-dashboard.html">MYGTA</a>
       <a class="nav-pill" href="about.html">ABOUT US</a>
       <a class="nav-pill" href="contact.html">CONTACT US</a>
     </div>
@@ -68,6 +69,16 @@
       <p class="page-updated">Last updated: May 26, 2026.</p>
       <p>Use this launch-readiness tool to check whether your setup is ready before GTA VI arrives. It focuses on actions players can take now while final preload, install size, editions, and control details remain pending.</p>
       <div class="notice">Confirmed baseline: Grand Theft Auto VI is scheduled for November 19, 2026 on PlayStation 5 and Xbox Series X|S. This is an unofficial fan tool, not affiliated with Rockstar Games or Take-Two Interactive.</div>
+
+      <section class="dashboard-save-panel">
+        <h2>Save This Score To MyGTA Dashboard</h2>
+        <p>Your readiness choices already save in this browser. Open your MyGTA Dashboard to combine this score with checklist progress, platform setup, and saved guides.</p>
+        <div class="dashboard-save-actions">
+          <button class="save-guide-button" type="button" data-save-guide data-guide-title="GTA 6 Launch Readiness Score" data-guide-url="launch-readiness.html">Save Guide</button>
+          <a href="my-gta-dashboard.html">Open My Dashboard</a>
+          <span class="save-status" data-save-status hidden></span>
+        </div>
+      </section>
 
       <section class="readiness-hero" aria-label="Launch readiness score">
         <div>
@@ -146,6 +157,7 @@
       </div>
     </article>
   </main>
+  <script src="site-tools.js"></script>
   <script>
     const readinessBoxes = Array.from(document.querySelectorAll("[data-readiness-id]"));
     const readinessScore = document.querySelector("#readiness-score");

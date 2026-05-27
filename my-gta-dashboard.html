@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My GTA 6 Launch Dashboard: Checklist, Readiness Score & Saved Guides</title>
+  <meta name="description" content="Create a free local MyGTA Dashboard to save your GTA 6 checklist progress, launch readiness score, platform setup, and favorite guides in this browser.">
+  <link rel="canonical" href="https://gtaviguidehub.com/my-gta-dashboard.html">
+  <meta property="og:title" content="My GTA 6 Launch Dashboard: Checklist, Readiness Score & Saved Guides">
+  <meta property="og:description" content="Save your GTA 6 checklist progress, launch readiness score, platform setup, and favorite guides in a free local browser dashboard.">
+  <meta property="og:url" content="https://gtaviguidehub.com/my-gta-dashboard.html">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9087913792382905" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "name": "MyGTA Launch Dashboard",
+        "url": "https://gtaviguidehub.com/my-gta-dashboard.html",
+        "applicationCategory": "GameApplication",
+        "operatingSystem": "Web browser",
+        "description": "A browser-local GTA 6 launch dashboard for saving checklist progress, readiness score, platform setup, and favorite guides."
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Guide Home", "item": "https://gtaviguidehub.com/"},
+          {"@type": "ListItem", "position": 2, "name": "MyGTA Dashboard", "item": "https://gtaviguidehub.com/my-gta-dashboard.html"}
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="mainnav">
+    <div class="mainnav-inner">
+      <a class="site-logo" href="index.html" aria-label="Guide home"><span>GTA</span><span>B</span></a>
+      <a class="nav-pill" href="news.html">NEWS</a>
+      <a class="nav-pill" href="ps4.html">PS4</a>
+      <a class="nav-pill" href="ps5.html">PS5</a>
+      <a class="nav-pill" href="xbox.html">XBOX</a>
+      <a class="nav-pill" href="community.html">COMMUNITY</a>
+      <a class="nav-pill active" href="my-gta-dashboard.html">MYGTA</a>
+      <a class="nav-pill" href="about.html">ABOUT US</a>
+      <a class="nav-pill" href="contact.html">CONTACT US</a>
+    </div>
+  </header>
+  <main class="simple-page">
+    <article class="article">
+      <h1>My GTA 6 Launch Dashboard</h1>
+      <div class="breadcrumb"><span>›</span><a href="index.html">Guide Home</a></div>
+      <p class="page-updated">Last updated: May 27, 2026.</p>
+      <div class="notice">Create a free MyGTA Dashboard to save your GTA 6 checklist progress, launch readiness score, platform setup, and favorite guides in this browser.</div>
+
+      <section class="dashboard-hero" aria-label="MyGTA profile status">
+        <div>
+          <p class="eyebrow">Free local profile</p>
+          <h2 id="dashboard-greeting">Build Your GTA 6 Launch Plan</h2>
+          <p id="dashboard-status">Your dashboard is saved locally in this browser. It does not create a cloud account or sync across devices.</p>
+        </div>
+        <form class="local-profile-card" id="dashboard-profile-form">
+          <label>Player name
+            <input type="text" name="username" placeholder="Your player name" minlength="2" required>
+          </label>
+          <button type="submit">Create Local Profile</button>
+          <p class="dashboard-mini-note">No password needed. This only saves a local profile name in your browser.</p>
+        </form>
+      </section>
+
+      <section class="dashboard-grid" aria-label="Dashboard progress">
+        <article class="dashboard-card">
+          <span class="dashboard-label">Launch Readiness</span>
+          <strong id="readiness-summary">0%</strong>
+          <p id="readiness-copy">Score your platform, storage, account, controller, spoiler safety, and guide route.</p>
+          <a href="launch-readiness.html">Update readiness score</a>
+        </article>
+        <article class="dashboard-card">
+          <span class="dashboard-label">100% Checklist</span>
+          <strong id="checklist-summary">0/0</strong>
+          <p id="checklist-copy">Checklist progress appears after you use the interactive tracker on the homepage.</p>
+          <a href="index.html#checklist">Open checklist</a>
+        </article>
+        <article class="dashboard-card">
+          <span class="dashboard-label">Platform Setup</span>
+          <strong id="platform-summary">Choose</strong>
+          <p>Pick the setup path you want this dashboard to prioritize.</p>
+          <div class="platform-choice" role="group" aria-label="Choose platform">
+            <button type="button" data-platform-choice="PS5">PS5</button>
+            <button type="button" data-platform-choice="Xbox">Xbox</button>
+          </div>
+        </article>
+        <article class="dashboard-card">
+          <span class="dashboard-label">Next Best Guide</span>
+          <strong id="next-guide-title">Launch Readiness</strong>
+          <p id="next-guide-copy">Start by scoring your setup, then move into release, platform, map, and checklist guides.</p>
+          <a id="next-guide-link" href="launch-readiness.html">Open next guide</a>
+        </article>
+      </section>
+
+      <h2>Saved Guides</h2>
+      <p>Use the Save Guide buttons on major pages to build a quick return path for launch week. Saved guides are stored only in this browser.</p>
+      <div class="saved-guides-list" id="saved-guides-list"></div>
+
+      <h2>Recommended Launch Route</h2>
+      <div class="next-guide-grid">
+        <a class="next-guide-card" href="release-date.html"><b>1. Release Watch</b><span>Confirm date, platforms, PC status, preorder, and install-size updates.</span></a>
+        <a class="next-guide-card" href="ps5.html"><b>2. PS5 Setup</b><span>Prepare account, storage, controls, and launch-week settings.</span></a>
+        <a class="next-guide-card" href="xbox.html"><b>3. Xbox Setup</b><span>Prepare Series X|S account, storage, controller, and preload watchlist.</span></a>
+        <a class="next-guide-card" href="map-locations.html"><b>4. Leonida Map</b><span>Track Vice City, Leonida Keys, Grassrivers, Port Gellhorn, Ambrosia, and Mount Kalaga.</span></a>
+        <a class="next-guide-card" href="index.html#checklist"><b>5. 100% Checklist</b><span>Save completion progress in this browser and return after launch verification.</span></a>
+      </div>
+    </article>
+  </main>
+  <script>
+    const accountKey = "gta6-guide-account";
+    const accountMessageKey = "gta6-guide-account-message";
+    const platformKey = "gta6-dashboard-platform";
+    const savedGuidesKey = "gta6-saved-guides";
+    const readinessIds = ["platform", "storage", "account", "controller", "spoilers", "guide-route", "optional-gear"];
+
+    const profileForm = document.querySelector("#dashboard-profile-form");
+    const greeting = document.querySelector("#dashboard-greeting");
+    const statusText = document.querySelector("#dashboard-status");
+    const readinessSummary = document.querySelector("#readiness-summary");
+    const checklistSummary = document.querySelector("#checklist-summary");
+    const checklistCopy = document.querySelector("#checklist-copy");
+    const platformSummary = document.querySelector("#platform-summary");
+    const nextGuideTitle = document.querySelector("#next-guide-title");
+    const nextGuideCopy = document.querySelector("#next-guide-copy");
+    const nextGuideLink = document.querySelector("#next-guide-link");
+    const savedGuidesList = document.querySelector("#saved-guides-list");
+
+    function readJson(key, fallback) {
+      try {
+        return JSON.parse(localStorage.getItem(key) || JSON.stringify(fallback));
+      } catch {
+        return fallback;
+      }
+    }
+
+    function readinessScore() {
+      const done = readinessIds.filter((id) => localStorage.getItem(`gta6-readiness-${id}`) === "true").length;
+      return Math.round((done / readinessIds.length) * 100);
+    }
+
+    function updateProfile() {
+      const name = localStorage.getItem(accountKey);
+      if (name) {
+        greeting.textContent = `Welcome back, ${name}`;
+        statusText.textContent = "Your local MyGTA Dashboard is active in this browser.";
+        profileForm.querySelector("input").value = name;
+        profileForm.querySelector("button").textContent = "Update Local Profile";
+      } else {
+        greeting.textContent = "Build Your GTA 6 Launch Plan";
+        statusText.textContent = "Create a free local profile to save checklist progress, readiness score, platform setup, and favorite guides in this browser.";
+        profileForm.querySelector("button").textContent = "Create Local Profile";
+      }
+    }
+
+    function updateProgressCards() {
+      const score = readinessScore();
+      readinessSummary.textContent = `${score}%`;
+
+      const done = localStorage.getItem("gta6-checklist-done") || "0";
+      const total = localStorage.getItem("gta6-checklist-total") || "0";
+      const percent = localStorage.getItem("gta6-checklist-percent") || "0";
+      checklistSummary.textContent = `${done}/${total}`;
+      checklistCopy.textContent = total === "0"
+        ? "Checklist progress appears after you use the interactive tracker on the homepage."
+        : `Your current saved checklist progress is ${percent}%.`;
+
+      const platform = localStorage.getItem(platformKey) || "";
+      platformSummary.textContent = platform || "Choose";
+
+      if (platform === "PS5") {
+        nextGuideTitle.textContent = "PS5 Setup";
+        nextGuideCopy.textContent = "Review storage, account, controller, accessibility, and launch-week PS5 prep.";
+        nextGuideLink.href = "ps5.html";
+      } else if (platform === "Xbox") {
+        nextGuideTitle.textContent = "Xbox Setup";
+        nextGuideCopy.textContent = "Review Series X|S storage, account, controller, accessibility, and preload watchlist.";
+        nextGuideLink.href = "xbox.html";
+      } else if (score < 75) {
+        nextGuideTitle.textContent = "Launch Readiness";
+        nextGuideCopy.textContent = "Score your setup first, then choose your platform route.";
+        nextGuideLink.href = "launch-readiness.html";
+      } else {
+        nextGuideTitle.textContent = "100% Checklist";
+        nextGuideCopy.textContent = "Your setup is moving. Start saving completion categories for launch-week verification.";
+        nextGuideLink.href = "index.html#checklist";
+      }
+    }
+
+    function renderSavedGuides() {
+      const guides = readJson(savedGuidesKey, []);
+      if (!guides.length) {
+        savedGuidesList.innerHTML = '<p class="empty-state">No saved guides yet. Open a guide page and tap Save Guide to add it here.</p>';
+        return;
+      }
+
+      savedGuidesList.innerHTML = guides.map((guide) => `
+        <a class="saved-guide-item" href="${guide.url}">
+          <b>${guide.title}</b>
+          <span>${guide.url}</span>
+        </a>
+      `).join("");
+    }
+
+    profileForm.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const name = new FormData(profileForm).get("username").trim();
+      localStorage.setItem(accountKey, name);
+      localStorage.setItem(accountMessageKey, `Signed in as ${name}`);
+      updateProfile();
+    });
+
+    document.querySelectorAll("[data-platform-choice]").forEach((button) => {
+      button.addEventListener("click", () => {
+        localStorage.setItem(platformKey, button.dataset.platformChoice);
+        updateProgressCards();
+      });
+    });
+
+    updateProfile();
+    updateProgressCards();
+    renderSavedGuides();
+  </script>
+</body>
+</html>

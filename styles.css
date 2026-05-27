@@ -1645,6 +1645,32 @@ select {
   background: var(--red-dark);
 }
 
+.auth-benefits {
+  padding: 12px;
+  border: 1px solid #ead7d1;
+  border-radius: var(--radius);
+  background: #fff7f4;
+}
+
+.auth-benefits b {
+  display: block;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.auth-benefits ul {
+  margin: 0 0 8px 18px;
+  padding: 0;
+  color: #333;
+  line-height: 1.55;
+}
+
+.auth-benefits p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
 .signup-popup {
   position: fixed;
   right: 18px;
@@ -1708,6 +1734,14 @@ select {
   line-height: 1.35;
 }
 
+.signup-popup a {
+  display: inline-flex;
+  margin-top: 8px;
+  color: #b92f1d;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 .signup-popup button {
   width: 30px;
   height: 30px;
@@ -1717,6 +1751,182 @@ select {
   color: #332719;
   cursor: pointer;
   font-weight: 900;
+}
+
+.dashboard-link-card,
+.dashboard-save-panel,
+.dashboard-hero {
+  border: 1px solid #dfe3e8;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(16, 24, 40, .07);
+}
+
+.dashboard-link-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: center;
+  padding: 22px;
+  margin: 22px 0;
+}
+
+.dashboard-link-card b,
+.dashboard-hero h2 {
+  display: block;
+  color: #111;
+  font-size: 24px;
+  line-height: 1.15;
+}
+
+.dashboard-link-card span,
+.dashboard-save-panel p,
+.dashboard-hero p,
+.dashboard-card p,
+.dashboard-mini-note,
+.empty-state,
+.saved-guide-item span {
+  color: #667085;
+}
+
+.dashboard-link-card a,
+.dashboard-save-panel a,
+.dashboard-card a,
+.save-guide-button,
+.local-profile-card button,
+.platform-choice button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 42px;
+  border-radius: 6px;
+  border: 0;
+  background: #d93624;
+  color: #fff;
+  font-weight: 800;
+  text-decoration: none;
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.dashboard-save-panel {
+  padding: 18px;
+  margin: 18px 0 24px;
+}
+
+.dashboard-save-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.save-guide-button.is-saved {
+  background: #127a46;
+}
+
+.save-status {
+  color: #127a46;
+  font-weight: 700;
+}
+
+.dashboard-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 360px);
+  gap: 22px;
+  align-items: center;
+  padding: 24px;
+  margin: 22px 0;
+}
+
+.eyebrow,
+.dashboard-label {
+  margin: 0 0 8px;
+  color: #d93624;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.local-profile-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px;
+  background: #f8fafc;
+  border: 1px solid #e4e7ec;
+  border-radius: 8px;
+}
+
+.local-profile-card label {
+  display: grid;
+  gap: 7px;
+  color: #111;
+  font-weight: 800;
+}
+
+.local-profile-card input {
+  min-height: 44px;
+  border: 1px solid #cfd5dd;
+  border-radius: 6px;
+  padding: 0 12px;
+  font: inherit;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0;
+}
+
+.dashboard-card {
+  min-height: 210px;
+  padding: 18px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.dashboard-card strong {
+  display: block;
+  margin-bottom: 10px;
+  color: #111;
+  font-size: 30px;
+  line-height: 1;
+}
+
+.platform-choice {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.platform-choice button {
+  min-height: 36px;
+  background: #111;
+}
+
+.saved-guides-list {
+  display: grid;
+  gap: 10px;
+  margin: 16px 0 26px;
+}
+
+.saved-guide-item,
+.empty-state {
+  display: block;
+  padding: 14px 16px;
+  border: 1px solid #dfe3e8;
+  border-radius: 8px;
+  background: #fff;
+  text-decoration: none;
+}
+
+.saved-guide-item b {
+  display: block;
+  color: #111;
 }
 
 @keyframes signup-pop {
@@ -1842,7 +2052,13 @@ select {
   }
 
   .readiness-hero,
-  .readiness-task {
+  .readiness-task,
+  .dashboard-hero,
+  .dashboard-link-card {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-grid {
     grid-template-columns: 1fr;
   }
 
