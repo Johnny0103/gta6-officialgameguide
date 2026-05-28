@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">GTAVI Guide Hub icon</title>
+  <desc id="desc">A neon Vice City inspired GTAVI guide mark with palm, map pin, and completion check.</desc>
+  <defs>
+    <linearGradient id="sky" x1="72" y1="54" x2="450" y2="458" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff6a3d"/>
+      <stop offset=".42" stop-color="#d93688"/>
+      <stop offset=".72" stop-color="#6f45ff"/>
+      <stop offset="1" stop-color="#0aa6c9"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="146" y1="152" x2="378" y2="398" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff2a8"/>
+      <stop offset=".5" stop-color="#f5bf3d"/>
+      <stop offset="1" stop-color="#d98218"/>
+    </linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0.95 0 1 0 0 0.22 0 0 1 0 0.75 0 0 0 .55 0"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="512" height="512" rx="108" fill="#111318"/>
+  <rect x="26" y="26" width="460" height="460" rx="88" fill="url(#sky)"/>
+  <path d="M70 376c74-26 126-30 196-12 57 14 98 12 176-15v96H70z" fill="#12151c" opacity=".92"/>
+  <path d="M82 333c74-16 129-16 195 0 57 14 98 14 153-2" fill="none" stroke="#ffffff" stroke-opacity=".42" stroke-width="8" stroke-linecap="round"/>
+  <g filter="url(#glow)">
+    <path d="M247 351c2-64 10-122 28-182" fill="none" stroke="#18191f" stroke-width="22" stroke-linecap="round"/>
+    <path d="M250 340c4-59 13-111 29-163" fill="none" stroke="url(#gold)" stroke-width="12" stroke-linecap="round"/>
+    <path d="M286 177c-45-26-83-26-121 0 45-58 91-61 121 0z" fill="#141820"/>
+    <path d="M288 177c-5-55 17-88 66-103-27 46-43 78-66 103z" fill="#141820"/>
+    <path d="M282 177c36-43 79-47 130-12-54 6-87 13-130 12z" fill="#141820"/>
+    <path d="M280 179c-58 1-92 23-113 72 49-25 82-40 113-72z" fill="#141820"/>
+    <path d="M281 173c18-47 54-67 111-60-49 26-77 43-111 60z" fill="#fee36e" opacity=".92"/>
+    <path d="M276 174c-48-17-87-9-121 33 55-12 89-19 121-33z" fill="#fee36e" opacity=".9"/>
+  </g>
+  <circle cx="360" cy="314" r="62" fill="#151820" stroke="#fff4a8" stroke-width="10"/>
+  <path d="M333 313l20 21 42-48" fill="none" stroke="#4df2bf" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="112" y="286" fill="#fff" font-family="Arial Black, Impact, system-ui, sans-serif" font-size="114" font-weight="900" letter-spacing="-6">VI</text>
+  <text x="108" y="334" fill="#fff2a8" font-family="Arial, system-ui, sans-serif" font-size="34" font-weight="900" letter-spacing="4">GUIDE</text>
+</svg>
